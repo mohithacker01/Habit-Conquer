@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Tracker - Daily Walking Habit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-walking"></i> Step Tracker</h1>
+            <p class="subtitle">Track your daily 5000 steps goal</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Today's Progress -->
+            <div class="progress-card">
+                <div class="progress-header">
+                    <h2>Today's Progress</h2>
+                    <span class="date" id="currentDate"></span>
+                </div>
+                
+                <div class="step-counter">
+                    <div class="step-display">
+                        <div class="step-number" id="currentSteps">0</div>
+                        <div class="step-label">Steps</div>
+                    </div>
+                    <div class="goal-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="goal-text">
+                            <span id="progressText">0 / 5,000 steps</span>
+                            <span class="percentage" id="percentage">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calorie-info">
+                    <div class="calorie-item">
+                        <i class="fas fa-fire"></i>
+                        <div>
+                            <div class="calorie-number" id="caloriesBurned">0</div>
+                            <div class="calorie-label">Calories Burned</div>
+                        </div>
+                    </div>
+                    <div class="calorie-item">
+                        <i class="fas fa-route"></i>
+                        <div>
+                            <div class="calorie-number" id="distance">0.0</div>
+                            <div class="calorie-label">Miles Walked</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Step Input -->
+            <div class="input-card">
+                <h3>Add Steps</h3>
+                <div class="input-group">
+                    <input type="number" id="stepInput" placeholder="Enter steps" min="0">
+                    <button id="addSteps" class="btn-primary">
+                        <i class="fas fa-plus"></i> Add Steps
+                    </button>
+                </div>
+                <div class="quick-add">
+                    <button class="btn-quick" data-steps="1000">+1K</button>
+                    <button class="btn-quick" data-steps="2000">+2K</button>
+                    <button class="btn-quick" data-steps="5000">+5K</button>
+                </div>
+            </div>
+
+            <!-- Weekly Progress -->
+            <div class="weekly-card">
+                <h3>This Week</h3>
+                <div class="week-grid" id="weekGrid">
+                    <!-- Days will be populated by JavaScript -->
+                </div>
+                <div class="week-stats">
+                    <div class="stat">
+                        <div class="stat-number" id="weekTotal">0</div>
+                        <div class="stat-label">Total Steps</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="weekStreak">0</div>
+                        <div class="stat-label">Day Streak</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="weekAvg">0</div>
+                        <div class="stat-label">Daily Average</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motivational Messages -->
+            <div class="motivation-card" id="motivationCard">
+                <div class="motivation-content">
+                    <i class="fas fa-trophy" id="motivationIcon"></i>
+                    <p id="motivationText">Start your walking journey today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

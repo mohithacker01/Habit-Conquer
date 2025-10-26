@@ -1,0 +1,296 @@
+.habit-list {
+  margin-bottom: 20px;
+}
+
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.habit-header h2 {
+  color: #333;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.habit-header h2 i {
+  color: #667eea;
+}
+
+.habit-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.completion-rate {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.habit-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+}
+
+.habits-container {
+  margin-bottom: 20px;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #e0e0e0;
+}
+
+.habit-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.habit-item.completed {
+  background: #e8f5e8;
+  border-left-color: #4CAF50;
+}
+
+.habit-item.completed .habit-name {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.habit-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.habit-checkbox {
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.habit-checkbox:hover {
+  border-color: #667eea;
+  transform: scale(1.1);
+}
+
+.habit-item.completed .habit-checkbox {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.habit-name {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.delete-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.delete-btn:hover {
+  background: #ff5252;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.add-habit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-habit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.add-habit-form {
+  margin-top: 20px;
+}
+
+.habit-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.habit-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-save {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-save:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-cancel:hover {
+  background: #e0e0e0;
+  border-color: #ccc;
+}
+
+.motivation-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.success-message {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.good-message {
+  background: linear-gradient(135deg, #6c757d, #868e96);
+  color: #333;
+}
+
+.ok-message {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  color: white;
+}
+
+.encourage-message {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+}
+
+.motivation-section i {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.motivation-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .habit-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .habit-stats {
+    align-items: flex-start;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .habit-item {
+    padding: 12px;
+  }
+  
+  .habit-name {
+    font-size: 1rem;
+  }
+  
+  .add-habit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,550 @@
+.analytics {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.analytics-header h2 {
+  color: #333;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.analytics-header h2 i {
+  color: #667eea;
+}
+
+.time-range-selector {
+  display: flex;
+  gap: 10px;
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.range-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #666;
+}
+
+.range-btn.active {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.range-btn:hover:not(.active) {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Overview Stats */
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.stat-card:nth-child(1) .stat-icon {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.stat-card:nth-child(2) .stat-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.stat-card:nth-child(3) .stat-icon {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+}
+
+.stat-card:nth-child(4) .stat-icon {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.stat-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Trend Section */
+.trend-section {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.trend-section h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trend-section h3 i {
+  color: #667eea;
+}
+
+.trend-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.trend-day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.day-name {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.day-bars {
+  display: flex;
+  gap: 5px;
+  height: 120px;
+  align-items: end;
+}
+
+.habit-bar, .step-bar {
+  width: 20px;
+  height: 100%;
+  background: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: height 0.5s ease;
+}
+
+.habit-bar .bar-fill {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+}
+
+.step-bar .bar-fill {
+  background: linear-gradient(180deg, #4CAF50, #45a049);
+}
+
+.day-mood {
+  font-size: 1.2rem;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.habit-color {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.step-color {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+/* Mood Correlation */
+.mood-correlation {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mood-correlation h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mood-correlation h3 i {
+  color: #ff6b6b;
+}
+
+.correlation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mood-stat {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.mood-stat:hover {
+  transform: translateY(-2px);
+}
+
+.mood-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.mood-emoji {
+  font-size: 1.5rem;
+}
+
+.mood-name {
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.mood-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.mood-metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Top Days */
+.top-days {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.top-days h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-days h3 i {
+  color: #6c757d;
+}
+
+.top-days-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top-day {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.top-day:hover {
+  transform: translateX(5px);
+}
+
+.rank {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.top-day:nth-child(1) .rank {
+  background: linear-gradient(135deg, #6c757d, #868e96);
+  color: #333;
+}
+
+.top-day:nth-child(2) .rank {
+  background: linear-gradient(135deg, #c0c0c0, #e0e0e0);
+  color: #333;
+}
+
+.top-day:nth-child(3) .rank {
+  background: linear-gradient(135deg, #cd7f32, #daa520);
+  color: white;
+}
+
+.day-info {
+  flex: 1;
+}
+
+.day-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.day-score {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.day-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.day-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.day-stat i {
+  color: #667eea;
+}
+
+/* Insights */
+.insights {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.insights h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insights h3 i {
+  color: #6c757d;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.insight.positive {
+  background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+  color: #2e7d32;
+  border-left: 4px solid #4CAF50;
+}
+
+.insight.improvement {
+  background: linear-gradient(135deg, #fff3e0, #fff8e1);
+  color: #f57c00;
+  border-left: 4px solid #ff9800;
+}
+
+.insight i {
+  font-size: 1.2rem;
+}
+
+.insight p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .overview-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .trend-chart {
+    height: 150px;
+  }
+  
+  .day-bars {
+    height: 80px;
+  }
+  
+  .correlation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .top-day {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .day-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .trend-chart {
+    height: 120px;
+  }
+  
+  .day-bars {
+    height: 60px;
+  }
+  
+  .habit-bar, .step-bar {
+    width: 15px;
+  }
+  
+  .mood-metrics {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .day-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

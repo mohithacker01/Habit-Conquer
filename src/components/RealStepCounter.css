@@ -1,0 +1,213 @@
+.real-step-counter {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e8f4fd;
+}
+
+.counter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.counter-header h3 {
+  color: #333;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.counter-header h3 i {
+  color: #667eea;
+}
+
+.status-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.step-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.step-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.step-label {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.status-message {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.status-message p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn-start, .btn-stop, .btn-reset {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-start {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-start:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-stop {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+}
+
+.btn-stop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-reset {
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e0e0e0;
+}
+
+.btn-reset:hover {
+  background: #e0e0e0;
+  border-color: #ccc;
+}
+
+.instructions {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #667eea;
+}
+
+.instructions h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.error-message {
+  background: #f8f9fa;
+  border: 1px solid #ffcccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.error-message p {
+  margin: 5px 0;
+  color: #d32f2f;
+}
+
+.error-message i {
+  margin-right: 8px;
+}
+
+/* mobile stuff */
+@media (max-width: 768px) {
+  .real-step-counter {
+    padding: 20px;
+  }
+  
+  .step-number {
+    font-size: 3rem;
+  }
+  
+  .control-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-start, .btn-stop, .btn-reset {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-number {
+    font-size: 2.5rem;
+  }
+  
+  .counter-header h3 {
+    font-size: 1.2rem;
+  }
+}
